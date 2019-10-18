@@ -44,12 +44,26 @@ And within code:
 
     var TinCan = require('tincanjs');
 
+React Native Usage
+-------------
+
+TinCanJS is available via `npm`.
+
+There is no support for synchronous requests when using this environment.
+
+Install via:
+
+    npm install tincanjs
+
+And within code:
+
+    var TinCan = require('tincanjs');
+
 Environments
 ------------
 
 Implementing a new Environment should be straightforward and requires overloading a couple
-of methods in the library. There are currently two examples, `Environment/Browser`
-and `Environment/Node`.
+of methods in the library. There are currently three examples, `Environment/Browser`, `Environment/Node` and `Environment/ReactNative`.
 
 Attachment Support
 ------------------
