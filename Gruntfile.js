@@ -32,6 +32,7 @@ module.exports = function(grunt) {
     ],
     browserFileList = coreFileList.slice(),
     nodeFileList = coreFileList.slice(),
+    reactNativeFileList = coreFileList.slice(),
     pkg,
     bower;
 
@@ -47,6 +48,9 @@ module.exports = function(grunt) {
     );
     nodeFileList.push(
         "src/Environment/Node.js"
+    );
+    reactNativeFileList.push(
+        "src/Environment/ReactNative.js"
     );
 
     pkg = grunt.file.readJSON("package.json");
@@ -107,7 +111,8 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     "build/tincan.js": browserFileList,
-                    "build/tincan-node.js": nodeFileList
+                    "build/tincan-node.js": nodeFileList,
+                    "build/tincan-react-native.js": reactNativeFileList
                 },
                 nonull: true
             }
