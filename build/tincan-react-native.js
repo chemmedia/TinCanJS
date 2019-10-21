@@ -7997,7 +7997,8 @@ TinCan client library
         fetch(url, {
                 method: cfg.method,
                 headers: headers,
-                body: cfg.data
+                body: cfg.data,
+                credentials: "include"
             })
             .then(function(response) {
                 requestComplete(
